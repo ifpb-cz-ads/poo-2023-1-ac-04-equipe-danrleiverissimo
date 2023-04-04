@@ -7,12 +7,16 @@ public class CTquestao1 {
         var input = new Scanner(System.in);
         int idade = input.nextInt();
         input.close();
+        if( idade < 0) {
+            System.out.println("invalido");
+            System.exit(0);
+        }
 
-        if( idade >= 18 && idade <= 65){
+        if( idade >= 18 && idade <= 65 ){
             System.out.println("Deve votar obrigatoriamente.");
             System.exit(0);
         }
-        if( idade >= 16 || idade >65 ){
+        if( idade >= 16 ){
             System.out.println("Voto facultativo.");
             System.exit(0);
         }
